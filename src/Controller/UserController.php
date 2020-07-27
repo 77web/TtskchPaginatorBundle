@@ -9,6 +9,9 @@ use App\Repository\UserRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Ttskch\PaginatorBundle\Context;
+use Ttskch\PaginatorBundle\Doctrine\Counter;
+use Ttskch\PaginatorBundle\Doctrine\Slicer;
 
 /**
  * @Route("/user", name="user_")
@@ -19,12 +22,13 @@ class UserController extends AbstractController
     /**
      * @Route("/", name="index")
      */
-    public function index(UserRepository $repository)
+    public function index(UserRepository $repository, Context $context)
     {
-        $users = $repository->findAll();
+        $qb = $repository->createQueryBuilder('u');
+        $context->initialize('id', new Slicer($qb), new Counter($qb));
 
         return [
-            'users' => $users,
+            'users' => $context->slice,
         ];
     }
 

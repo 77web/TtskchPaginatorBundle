@@ -11,9 +11,9 @@
   <table class="table table-sm table-hover">
     <thead>
     <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Email</th>
+      <th>{{ ttskch_paginator_sortable('id') }}</th>
+      <th>{{ ttskch_paginator_sortable('name') }}</th>
+      <th>{{ ttskch_paginator_sortable('email') }}</th>
     </tr>
     </thead>
     <tbody>
@@ -28,4 +28,6 @@
     {% endfor %}
     </tbody>
   </table>
+
+  {{ ttskch_paginator_pager() }}
 {% endblock %}

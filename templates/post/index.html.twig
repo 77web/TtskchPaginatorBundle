@@ -8,13 +8,33 @@
     </li>
   </ol>
 
+  {{ form_start(form, {action: path('post_index'), method: 'get', attr: {class: 'form-inline align-items-start'}}) }}
+  <div class="container ml-0 mb-3">
+    <div class="row d-flex mb-2">
+      <div class="mr-sm-2 flex-grow-1" style="width:1px">
+        {{ form_widget(form.query) }}
+      </div>
+      <div class="flex-grow-1" style="width:1px">
+        <div class="input-group">
+          {{ form_widget(form.after) }}
+          <div class="input-group-prepend input-group-append">
+            <label class="input-group-text"> - </label>
+          </div>
+          {{ form_widget(form.before) }}
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-secondary ml-2"><i class="fa fa-search"></i></button>
+    </div>
+  </div>
+  {{ form_end(form) }}
+
   <table class="table table-sm table-hover">
     <thead>
     <tr>
-      <th>Id</th>
-      <th>User</th>
-      <th>Subject</th>
-      <th>Date</th>
+      <th>{{ ttskch_paginator_sortable('id') }}</th>
+      <th>{{ ttskch_paginator_sortable('user.name', 'User') }}</th>
+      <th>{{ ttskch_paginator_sortable('subject') }}</th>
+      <th>{{ ttskch_paginator_sortable('date') }}</th>
     </tr>
     </thead>
     <tbody>
@@ -32,4 +52,6 @@
     {% endfor %}
     </tbody>
   </table>
+
+{{ ttskch_paginator_pager() }}
 {% endblock %}
