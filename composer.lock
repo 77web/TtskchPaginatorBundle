@@ -4,8 +4,111 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "40000d2630ad4669b7f60573fce50ee4",
+    "content-hash": "469acbe9c3f2f7868638dbd87dcf6c85",
     "packages": [
+        {
+            "name": "cakephp/core",
+            "version": "3.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/core.git",
+                "reference": "76b9450dc68c81f93bca7827cfbb42a53a5f7737"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/core/zipball/76b9450dc68c81f93bca7827cfbb42a53a5f7737",
+                "reference": "76b9450dc68c81f93bca7827cfbb42a53a5f7737",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/utility": "^3.6.0",
+                "php": ">=5.6.0"
+            },
+            "suggest": {
+                "cakephp/cache": "To use Configure::store() and restore().",
+                "cakephp/event": "To use PluginApplicationInterface or plugin applications."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cake\\Core\\": "."
+                },
+                "files": [
+                    "functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/core/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP Framework Core classes",
+            "homepage": "https://cakephp.org",
+            "keywords": [
+                "cakephp",
+                "core",
+                "framework"
+            ],
+            "time": "2020-06-16T00:54:28+00:00"
+        },
+        {
+            "name": "cakephp/utility",
+            "version": "3.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/utility.git",
+                "reference": "27d9c7409ad89272e2483e3196aabc47385d3db6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/utility/zipball/27d9c7409ad89272e2483e3196aabc47385d3db6",
+                "reference": "27d9c7409ad89272e2483e3196aabc47385d3db6",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/core": "^3.6.0",
+                "php": ">=5.6.0"
+            },
+            "suggest": {
+                "ext-intl": "To use Text::transliterate() or Text::slug()",
+                "lib-ICU": "To use Text::transliterate() or Text::slug()"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cake\\Utility\\": "."
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/utility/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP Utility classes such as Inflector, String, Hash, and Security",
+            "homepage": "https://cakephp.org",
+            "keywords": [
+                "cakephp",
+                "hash",
+                "inflector",
+                "security",
+                "string",
+                "utility"
+            ],
+            "time": "2020-06-14T02:01:05+00:00"
+        },
         {
             "name": "composer/package-versions-deprecated",
             "version": "1.10.99",
@@ -7150,6 +7253,56 @@
                 }
             ],
             "time": "2020-05-20T17:43:50+00:00"
+        },
+        {
+            "name": "ttskch/paginator-bundle",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ttskch/TtskchPaginatorBundle.git",
+                "reference": "8b53e06bd83d7d7164c2392a66a4a5e87c4fa962"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ttskch/TtskchPaginatorBundle/zipball/8b53e06bd83d7d7164c2392a66a4a5e87c4fa962",
+                "reference": "8b53e06bd83d7d7164c2392a66a4a5e87c4fa962",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/utility": "^3.7",
+                "php": ">=7.1.3|>=7.2.5",
+                "symfony/framework-bundle": "^4.0|^5.0",
+                "symfony/twig-bundle": "^4.0|^5.0"
+            },
+            "require-dev": {
+                "doctrine/orm": "^2.7",
+                "phpunit/phpunit": "^7.5",
+                "symfony/browser-kit": "^4.0|^5.0",
+                "symfony/form": "^4.0|^5.0",
+                "symfony/phpunit-bridge": "^4.0|^5.0",
+                "symfony/yaml": "^4.0|^5.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Ttskch\\PaginatorBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The most thin and simple paginator bundle for Symfony",
+            "keywords": [
+                "customizable",
+                "pager",
+                "pagination",
+                "paginator",
+                "searchable",
+                "sortable",
+                "symfony"
+            ],
+            "time": "2020-07-27T11:44:25+00:00"
         },
         {
             "name": "twig/extra-bundle",

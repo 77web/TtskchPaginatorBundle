@@ -1,4 +1,10 @@
 {
+    "cakephp/core": {
+        "version": "3.9.1"
+    },
+    "cakephp/utility": {
+        "version": "3.9.1"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.10.99"
     },
@@ -518,6 +524,9 @@
     },
     "symfony/yaml": {
         "version": "v5.1.3"
+    },
+    "ttskch/paginator-bundle": {
+        "version": "1.0.3"
     },
     "twig/extra-bundle": {
         "version": "v3.0.4"
